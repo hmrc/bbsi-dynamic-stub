@@ -1,0 +1,11 @@
+# microservice specific routes
+
+# individual (nino) routes
+POST        /test-only/:nino/bbsiDetails        uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.createBBSI(nino: String)
+GET         /test-only/:nino/bbsiDetails        uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.findBBSIDetailsByNino(nino: String)
+DELETE      /test-only/bbsiDetails/drop         uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.dropBBSICollection
+POST        /test-only/:nino/iabds              uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.createIabds(nino: String)
+GET         /test-only/:nino/iabds              uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.findIabdsByNino(nino: String)
+GET         /test-only/:nino/iabds/:type        uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.findIabdsByNinoAndType(nino: String, type: Int)
+DELETE      /test-only/iabds/drop               uk.gov.hmrc.bbsi.stub.controllers.BBSIStubController.dropIabdsCollection
+
